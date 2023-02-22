@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+
+    <!--
+    Most controllers will use the ControllerClassNameHandlerMapping above, but
+    for the index controller we are using ParameterizableViewController, so we must
+    define an explicit mapping for it.
+    -->
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="sesion.htm">sesionController</prop>
+                <prop key="salir.htm">sesionController</prop>
+                <prop key="index.htm">indexController</prop>
+                <prop key="personal.htm">personaController</prop>
+                <prop key="detallesPersona.htm">personaController</prop>
+                <prop key="eliminarPersona.htm">personaController</prop>
+                <prop key="incidencia.htm">incidenciaController</prop>
+                <prop key="detallesIncidencia.htm">incidenciaController</prop>
+                <prop key="asistencia.htm">asistenciaController</prop>
+                <prop key="registrarAsistencia.htm">asistenciaController</prop>
+                <prop key="detallesAsistencia.htm">asistenciaController</prop>
+                <prop key="updateAsistencia.htm">asistenciaController</prop>
+                <prop key="filtroAsistenciaPracticante.htm">asistenciaController</prop>
+                <prop key="unidad.htm">incidenciaController</prop>
+                <prop key="inicidenciaEnProceso.htm">incidenciaController</prop>
+                <prop key="inicidenciaFinalizado.htm">incidenciaController</prop>
+                <prop key="cancelarIncidencia.htm">incidenciaController</prop>
+                <prop key="FichaServicioTecnico.htm">incidenciaController</prop>
+                <prop key="estadoIncidencia.htm">incidenciaController</prop><!--Devuelve el estado de la incidencia-->
+                <prop key="filtroIncidencias.htm">incidenciaController</prop>
+                <prop key="returnIdOficina.htm">incidenciaController</prop>
+                <prop key="atencionEnviada.htm">incidenciaController</prop>
+                <prop key="reconciderarIncidenciaFilnalizada.htm">incidenciaController</prop>
+                <prop key="detallesPracticantes.htm">personaController</prop>
+                <prop key="updatePracticante.htm">personaController</prop>
+                <prop key="Ficha_Asistencia_Practicante.htm">personaController</prop>
+                <prop key="esPracticante.htm">personaController</prop>
+                <prop key="filtroPersonaPorcargo.htm">personaController</prop>
+                <prop key="oficina.htm">oficinaController</prop>
+                <prop key="mantenimientoUnidad.htm">oficinaController</prop>
+                <prop key="detallesoficina.htm">oficinaController</prop>
+                <prop key="detallesUnidad.htm">oficinaController</prop>
+                <prop key="desactivarUnidad.htm">oficinaController</prop>
+                <prop key="filtroOficina.htm">oficinaController</prop>
+                <prop key="desactivarOficina.htm">oficinaController</prop>
+                <prop key="retornarUnidadesPorOficina.htm">oficinaController</prop>
+                <prop key="changePassword.htm">changePasswordController</prop>
+                <prop key="programacion.htm">programacionController</prop>
+                <prop key="atencion.htm">programacionController</prop>
+                <prop key="finalizarTarea.htm">programacionController</prop>
+                <prop key="sePuedeCancelarTarea.htm">programacionController</prop>
+                <prop key="cancelarTarea.htm">programacionController</prop>
+                <prop key="filtroProgramacion.htm">programacionController</prop>
+                <prop key="detallesProgramacion.htm">programacionController</prop>
+                <prop key="updateProgramacion.htm">programacionController</prop>
+                <prop key="unidad_por_oficina.htm">programacionController</prop>
+                <prop key="atencionEnviadaProgramacion.htm">programacionController</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/jsp/"
+          p:suffix=".jsp" />
+    <!--
+    The sesion controller.
+    -->
+    <bean name="sesionController"
+          class="Controller.sessionController" />
+    <bean name="indexController"
+          class="Controller.indexController" />
+    <bean name="personaController"
+          class="Controller.personaController" />
+    
+    <bean name="incidenciaController"
+          class="Controller.incidenciaController" />
+    
+    <bean name="asistenciaController"
+          class="Controller.asistenciaController" />
+    
+    <bean name="oficinaController"
+          class="Controller.oficinaController" />
+    
+    <bean name="changePasswordController"
+          class="Controller.changePasswordController" />
+    
+    <bean name="programacionController"
+          class="Controller.programacionController" />
+
+</beans>

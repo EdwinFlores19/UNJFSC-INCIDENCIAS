@@ -1,0 +1,84 @@
+@media screen and (max-width:1366px){
+     ::-webkit-scrollbar{
+         width: 4px;
+          border-radius: 5px;
+    }
+    
+    /*HEADER*/
+    #cabezera{
+        height: 50px;
+    }
+    #cabezera h1{
+        transform: translateY(-12px);
+    }
+    #cabezera h1 a{
+        font-size: 40px;
+    }   
+    #fecha{
+        font-size: 30px;
+        transform: translateY(15px);
+    }
+    
+    /*ICONO QUE DESPLIEGA Y CONTRAE EL NAV*/
+    #cabezera span.fa-remove, #cabezera span.fa-bars{
+        transform: translateY(-10px);
+        display: inline-block;
+    }
+    
+    /*LISTA CABEZERA*/
+    section > div.container-fluid > div.row.lista-cabezera{
+        font-size: 14px;
+    }
+    /*CUERPO LISTA*/
+    section > div.container-fluid.lista-cuerpo{
+         font-size: 13px;
+    }
+    
+    section > div.container-fluid.lista-cuerpo > div.row > div{
+        padding: 15px 0px 0px 0px;
+    }
+    
+    /*NAV*/
+    #menu{
+        font-size: 14px;
+    }
+    #menu button[type="submit"]{
+        font-size: 13px;
+    }
+    /*BOONES DENTRO DEL NAV*/
+    
+    #dropdownMenu2,#btn-show-unidad{
+        font-size: 14px;
+    }
+    button.dropdown-item{
+        font-size: 13px;
+    }
+    
+    /*FORMULARIOS FLOTATANTES*/
+    .formulario-flotante .formulario-flotante-cuerpo{
+        font-size: 14px;
+    }
+    .formulario-flotante .formulario-flotante-cuerpo input,
+    .formulario-flotante .formulario-flotante-cuerpo select,
+    .formulario-flotante .formulario-flotante-cuerpo textarea{
+        font-size: 13px;
+    }
+    
+    /*MODIFICACION EN EL ARCHIVO INCIDENCIAALUMNO.JSP*/
+    .cuerpo-historia{
+        font-size: 14px;
+    }
+    
+    /*Modificando en tamaño de letra de los contenedores filtro*/
+    #content-filtro #content-filtro-body{
+        font-size: 13px;
+    }
+    
+    #content-filtro #content-filtro-body input[type="date"],
+    #content-filtro #content-filtro-body select,
+    #content-filtro #content-filtro-body input[type="text"],
+     #content-filtro #content-filtro-body button,
+     #content-filtro #content-filtro-body input[type="submit"]{
+        font-size: 13px;
+    }
+}
