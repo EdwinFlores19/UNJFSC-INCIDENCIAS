@@ -1,0 +1,202 @@
+@font-face{
+    font-family: 'calendar';
+    src:url(../fuentes/calendar.ttf);
+}
+@font-face{
+    font-family: 'go3v2';
+    src:url(../fuentes/go3v2.ttf);
+}
+/* #FECHA*/
+
+#fecha{
+    float: right;
+    padding: 5px;
+    font-size: 40px;
+    font-family: 'Roboto Mono',monospace;
+    color: #d0bc54;
+    transform: translateY(5px);
+    text-shadow: 1px 1px 2px black;
+}
+
+/*BACKGROUND PARA TODO EL DOCUMENTO*/
+body{
+    /*background: linear-gradient(to left,#ccc,#fff,#ccc,#ccc,#fff,#ccc);*/
+    background: #f1f1f1;
+    overflow: hidden;
+}
+/*BARRA INSTITUCIONAL*/
+#barra-Institucional{
+    position: fixed;
+    background-image: url('../img/barra.png');
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 55px;
+    border-bottom: #1c527e 2px solid;
+
+}
+#barra-Institucional table{
+    float: right;
+}
+#barra-Institucional table tr th{
+    color: #c4b971;
+}
+#barra-Institucional table tr td a{
+    color: #FFF;
+    font-size: 10px;
+}
+#barra-Institucional table tr:last-child td:first-child a{
+    border-right: solid 1px #525252;
+    padding-right: 20px;
+}
+/*ESTILOS PARA EL MENU*/
+#menu{
+    /*background: linear-gradient(to bottom,#ccc,#0e1a38,#0e1a38,#0e1a38,#0e1a38,#0e1a38,#0e1a38,#0e1a38,#0e1a38,#0e1a38,#0e1a38);*/
+    width: 18%;
+    background: #0e1a38;
+    border-right: 2px solid #FFF;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    padding-top: 55px;
+    height: 100%;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#menu > div.container-fluid{
+    border-top:2px solid #FFF;
+}
+/*ESTILOS PARA EL CUERPO*/
+#cuerpo{
+    margin: 0px;
+    width: 82%;
+    position: absolute;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+    left: 18%;
+    padding-top: 55px;
+    height: 100%;
+}
+/*ESTILOS PARA LA CABEZERA*/
+#cabezera{
+    border-bottom: 2px solid #1a517f;
+    background: linear-gradient(to top,#377197,#ccc);
+    padding-bottom: 5px;
+}
+#cabezera h1{
+    color: black;
+    font-size: 3em;
+    margin: 0;
+
+}
+#cabezera h1 a{
+    color: #e0dcdc;
+    text-decoration: none;
+    text-shadow:1px 1px 3px black;
+}
+#cabezera h1 a span:first-child{
+    font-family: "go3v2";
+}
+#cabezera h1 a span:last-child{
+    font-family:  "go3v2";
+}
+#cabezera h1 a:hover{
+    text-decoration: none;
+}
+#cabezera span.fa-remove,#cabezera span.fa-bars{
+    margin-top: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out; 
+}
+/*ESTILOS PARA EL FOOTER*/
+footer{
+    margin-top: 10px;
+    background-image: url(../img/fondo_footer.jpg) ;  
+    height: 55px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.5s ease-in-out;
+}
+footer table{
+    margin: auto;
+}
+footer table tr td{
+    color: #fff;
+    font-family: monospace;
+    font-size: 10px;
+}
+
+/*Estilos para los radio y checkbox*/
+
+form input[type="radio"],
+form input[type="checkbox"]{
+    display: none;
+}
+form input[type="radio"] + label,
+form input[type="checkbox"] + label{
+    color: #0074D9;
+    padding: 7px 15px 7px 51px;
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form input[type="radio"] + label.radioAllPracticantes{
+    color: black;
+}
+form input[type="radio"] + label:hover,
+form input[type="checkbox"] + label:hover{
+    background-color: rgba(0,116,217,.1); 
+}
+form input[type="radio"] + label:before,
+form input[type="checkbox"] + label:before{
+    content: "";
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    display: inline-block;
+    background:none;
+    border: 3px solid #0074D9;
+    border-radius: 50%;
+    left: 17px;
+    top:10px;
+}
+
+form input[type="radio"] + label.radioAllPracticantes:before{
+    border: 3px solid orange;
+}
+
+form input[type="checkbox"] + label:before{
+    border-radius: 10%;
+}
+form input[type="radio"]:checked + label,
+form input[type="checkbox"]:checked + label{
+    padding: 5px 15px;
+    background-color: #0074D9;
+    border-radius: 2px;
+    color: #fff;    
+}
+form input[type="radio"]:checked + label.radioAllPracticantes{
+    background-color: orange    ;
+}
+form input[type="radio"]:checked + label:before,
+form input[type="checkbox"]:checked + label:before{
+    display: none; 
+}
+
+@media screen and (max-width:1366px){
+    #menu{
+        width: 20%;
+    }
+    #cuerpo{
+        width: 80%;
+        left: 20%;
+    }
+}
