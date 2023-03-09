@@ -8,6 +8,9 @@ body
     padding: 0;
     background: url(../img/7.jpg);
     background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     font-family: sans-serif;
 }
 .loginBox{
