@@ -44,7 +44,7 @@ function openCloseForm() {
                 if (typeof html.SESIONFINALIZADA === "undefined") {
                     document.getElementById("tabla-lista-unidad").children[1].innerHTML = html.unidadHTML;
                     $("#tabla-lista-unidad").DataTable(
-                            {
+                    {
                                 "language": {
                                     "url": "http://cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
                                 }
